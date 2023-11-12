@@ -1,11 +1,12 @@
-faker
-parsedatetime
+# faker
+# parsedatetime
 hopsworks
 nbconvert
 scikit-learn
-plotly
+# plotly
 Pillow
 seaborn
 dataframe-image
-streamlit_folium
-plotly
+# streamlit_folium
+# plotly
+# MarkupSafe>=2.1.1
