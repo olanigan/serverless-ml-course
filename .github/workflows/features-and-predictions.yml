@@ -1,5 +1,6 @@
 name: iris-feature-and-prediction-pipelines
 
+
 on:
   push:
     branches:
@@ -7,6 +8,11 @@ on:
   workflow_dispatch:
 #  schedule:
 #    - cron: '11 11 * * *'
+
+permissions:
+  writes:
+    - /usr/local/share/jupyter
+
 
 jobs:
   test_schedule:
@@ -25,7 +31,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: check ipython kernel
+      - name: check and install ipython kernel
         run: |
           ipython kernel install --name python3
           jupyter kernelspec list --path
