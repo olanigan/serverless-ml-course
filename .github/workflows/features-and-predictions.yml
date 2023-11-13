@@ -1,6 +1,10 @@
 name: iris-feature-and-prediction-pipelines
 
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 #  schedule:
 #    - cron: '11 11 * * *'
 
@@ -21,10 +25,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # - name: check ipython kernel
-      #   run: |
-      #     ipython kernel install --name python3 77
-      #     jupyter kernelspec list --path
+      - name: check ipython kernel
+        run: |
+          ipython kernel install --name python3 77
+          jupyter kernelspec list --path
           
       - name: execute python workflows from bash script
         env: 
