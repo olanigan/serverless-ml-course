@@ -27,7 +27,7 @@ jobs:
 
       - name: check ipython kernel
         run: |
-          ipython kernel install --name python3 77
+          ipython kernel install --name python3
           jupyter kernelspec list --path
           
       - name: execute python workflows from bash script
